@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FC8900619C1C92C00E4ECCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900519C1C92C00E4ECCD /* Foundation.framework */; };
+		8FC8900819C1C92C00E4ECCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900719C1C92C00E4ECCD /* CoreGraphics.framework */; };
+		8FC8900A19C1C92C00E4ECCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900919C1C92C00E4ECCD /* UIKit.framework */; };
+		8FC8901019C1C92C00E4ECCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8900E19C1C92C00E4ECCD /* InfoPlist.strings */; };
+		8FC8901219C1C92C00E4ECCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901119C1C92C00E4ECCD /* main.m */; };
+		8FC8901619C1C92C00E4ECCD /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */; };
+		8FC8901919C1C92C00E4ECCD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8901719C1C92C00E4ECCD /* Main_iPhone.storyboard */; };
+		8FC8901C19C1C92C00E4ECCD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8901A19C1C92C00E4ECCD /* Main_iPad.storyboard */; };
+		8FC8901F19C1C92C00E4ECCD /* OPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901E19C1C92C00E4ECCD /* OPViewController.m */; };
+		8FC8902119C1C92C00E4ECCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8902019C1C92C00E4ECCD /* Images.xcassets */; };
+		8FC8902819C1C92C00E4ECCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8902719C1C92C00E4ECCD /* XCTest.framework */; };
+		8FC8902919C1C92C00E4ECCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900519C1C92C00E4ECCD /* Foundation.framework */; };
+		8FC8902A19C1C92C00E4ECCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900919C1C92C00E4ECCD /* UIKit.framework */; };
+		8FC8903219C1C92C00E4ECCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8903019C1C92C00E4ECCD /* InfoPlist.strings */; };
+		8FC8903419C1C92C00E4ECCD /* OpenPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8903319C1C92C00E4ECCD /* OpenPhotoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FC8902B19C1C92C00E4ECCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FC88FFA19C1C92C00E4ECCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC8900119C1C92C00E4ECCD;
+			remoteInfo = OpenPhoto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FC8900219C1C92C00E4ECCD /* OpenPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC8900519C1C92C00E4ECCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FC8900719C1C92C00E4ECCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FC8900919C1C92C00E4ECCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FC8900D19C1C92C00E4ECCD /* OpenPhoto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenPhoto-Info.plist"; sourceTree = "<group>"; };
+		8FC8900F19C1C92C00E4ECCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FC8901119C1C92C00E4ECCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FC8901319C1C92C00E4ECCD /* OpenPhoto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenPhoto-Prefix.pch"; sourceTree = "<group>"; };
+		8FC8901419C1C92C00E4ECCD /* OPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppDelegate.h; sourceTree = "<group>"; };
+		8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
+		8FC8901819C1C92C00E4ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8FC8901B19C1C92C00E4ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		8FC8901D19C1C92C00E4ECCD /* OPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewController.h; sourceTree = "<group>"; };
+		8FC8901E19C1C92C00E4ECCD /* OPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPViewController.m; sourceTree = "<group>"; };
+		8FC8902019C1C92C00E4ECCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8FC8902619C1C92C00E4ECCD /* OpenPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC8902719C1C92C00E4ECCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8FC8902F19C1C92C00E4ECCD /* OpenPhotoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenPhotoTests-Info.plist"; sourceTree = "<group>"; };
+		8FC8903119C1C92C00E4ECCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FC8903319C1C92C00E4ECCD /* OpenPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenPhotoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FC88FFF19C1C92C00E4ECCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8900819C1C92C00E4ECCD /* CoreGraphics.framework in Frameworks */,
+				8FC8900A19C1C92C00E4ECCD /* UIKit.framework in Frameworks */,
+				8FC8900619C1C92C00E4ECCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC8902319C1C92C00E4ECCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8902819C1C92C00E4ECCD /* XCTest.framework in Frameworks */,
+				8FC8902A19C1C92C00E4ECCD /* UIKit.framework in Frameworks */,
+				8FC8902919C1C92C00E4ECCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FC88FF919C1C92C00E4ECCD = {
+			isa = PBXGroup;
+			children = (
+				8FC8900B19C1C92C00E4ECCD /* OpenPhoto */,
+				8FC8902D19C1C92C00E4ECCD /* OpenPhotoTests */,
+				8FC8900419C1C92C00E4ECCD /* Frameworks */,
+				8FC8900319C1C92C00E4ECCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FC8900319C1C92C00E4ECCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8900219C1C92C00E4ECCD /* OpenPhoto.app */,
+				8FC8902619C1C92C00E4ECCD /* OpenPhotoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FC8900419C1C92C00E4ECCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8900519C1C92C00E4ECCD /* Foundation.framework */,
+				8FC8900719C1C92C00E4ECCD /* CoreGraphics.framework */,
+				8FC8900919C1C92C00E4ECCD /* UIKit.framework */,
+				8FC8902719C1C92C00E4ECCD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FC8900B19C1C92C00E4ECCD /* OpenPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8901419C1C92C00E4ECCD /* OPAppDelegate.h */,
+				8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */,
+				8FC8901719C1C92C00E4ECCD /* Main_iPhone.storyboard */,
+				8FC8901A19C1C92C00E4ECCD /* Main_iPad.storyboard */,
+				8FC8901D19C1C92C00E4ECCD /* OPViewController.h */,
+				8FC8901E19C1C92C00E4ECCD /* OPViewController.m */,
+				8FC8902019C1C92C00E4ECCD /* Images.xcassets */,
+				8FC8900C19C1C92C00E4ECCD /* Supporting Files */,
+			);
+			path = OpenPhoto;
+			sourceTree = "<group>";
+		};
+		8FC8900C19C1C92C00E4ECCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8900D19C1C92C00E4ECCD /* OpenPhoto-Info.plist */,
+				8FC8900E19C1C92C00E4ECCD /* InfoPlist.strings */,
+				8FC8901119C1C92C00E4ECCD /* main.m */,
+				8FC8901319C1C92C00E4ECCD /* OpenPhoto-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FC8902D19C1C92C00E4ECCD /* OpenPhotoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8903319C1C92C00E4ECCD /* OpenPhotoTests.m */,
+				8FC8902E19C1C92C00E4ECCD /* Supporting Files */,
+			);
+			path = OpenPhotoTests;
+			sourceTree = "<group>";
+		};
+		8FC8902E19C1C92C00E4ECCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FC8902F19C1C92C00E4ECCD /* OpenPhotoTests-Info.plist */,
+				8FC8903019C1C92C00E4ECCD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FC8900119C1C92C00E4ECCD /* OpenPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC8903719C1C92C00E4ECCD /* Build configuration list for PBXNativeTarget "OpenPhoto" */;
+			buildPhases = (
+				8FC88FFE19C1C92C00E4ECCD /* Sources */,
+				8FC88FFF19C1C92C00E4ECCD /* Frameworks */,
+				8FC8900019C1C92C00E4ECCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenPhoto;
+			productName = OpenPhoto;
+			productReference = 8FC8900219C1C92C00E4ECCD /* OpenPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FC8902519C1C92C00E4ECCD /* OpenPhotoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC8903A19C1C92C00E4ECCD /* Build configuration list for PBXNativeTarget "OpenPhotoTests" */;
+			buildPhases = (
+				8FC8902219C1C92C00E4ECCD /* Sources */,
+				8FC8902319C1C92C00E4ECCD /* Frameworks */,
+				8FC8902419C1C92C00E4ECCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FC8902C19C1C92C00E4ECCD /* PBXTargetDependency */,
+			);
+			name = OpenPhotoTests;
+			productName = OpenPhotoTests;
+			productReference = 8FC8902619C1C92C00E4ECCD /* OpenPhotoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FC88FFA19C1C92C00E4ECCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = JDSystems;
+				TargetAttributes = {
+					8FC8902519C1C92C00E4ECCD = {
+						TestTargetID = 8FC8900119C1C92C00E4ECCD;
+					};
+				};
+			};
+			buildConfigurationList = 8FC88FFD19C1C92C00E4ECCD /* Build configuration list for PBXProject "OpenPhoto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FC88FF919C1C92C00E4ECCD;
+			productRefGroup = 8FC8900319C1C92C00E4ECCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FC8900119C1C92C00E4ECCD /* OpenPhoto */,
+				8FC8902519C1C92C00E4ECCD /* OpenPhotoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FC8900019C1C92C00E4ECCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8901C19C1C92C00E4ECCD /* Main_iPad.storyboard in Resources */,
+				8FC8902119C1C92C00E4ECCD /* Images.xcassets in Resources */,
+				8FC8901919C1C92C00E4ECCD /* Main_iPhone.storyboard in Resources */,
+				8FC8901019C1C92C00E4ECCD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC8902419C1C92C00E4ECCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8903219C1C92C00E4ECCD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FC88FFE19C1C92C00E4ECCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8901219C1C92C00E4ECCD /* main.m in Sources */,
+				8FC8901619C1C92C00E4ECCD /* OPAppDelegate.m in Sources */,
+				8FC8901F19C1C92C00E4ECCD /* OPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC8902219C1C92C00E4ECCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC8903419C1C92C00E4ECCD /* OpenPhotoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FC8902C19C1C92C00E4ECCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC8900119C1C92C00E4ECCD /* OpenPhoto */;
+			targetProxy = 8FC8902B19C1C92C00E4ECCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FC8900E19C1C92C00E4ECCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC8900F19C1C92C00E4ECCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FC8901719C1C92C00E4ECCD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC8901819C1C92C00E4ECCD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8FC8901A19C1C92C00E4ECCD /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC8901B19C1C92C00E4ECCD /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8FC8903019C1C92C00E4ECCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC8903119C1C92C00E4ECCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FC8903519C1C92C00E4ECCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FC8903619C1C92C00E4ECCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FC8903819C1C92C00E4ECCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenPhoto/OpenPhoto-Prefix.pch";
+				INFOPLIST_FILE = "OpenPhoto/OpenPhoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8FC8903919C1C92C00E4ECCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenPhoto/OpenPhoto-Prefix.pch";
+				INFOPLIST_FILE = "OpenPhoto/OpenPhoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8FC8903B19C1C92C00E4ECCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenPhoto.app/OpenPhoto";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenPhoto/OpenPhoto-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenPhotoTests/OpenPhotoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8FC8903C19C1C92C00E4ECCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenPhoto.app/OpenPhoto";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenPhoto/OpenPhoto-Prefix.pch";
+				INFOPLIST_FILE = "OpenPhotoTests/OpenPhotoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FC88FFD19C1C92C00E4ECCD /* Build configuration list for PBXProject "OpenPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC8903519C1C92C00E4ECCD /* Debug */,
+				8FC8903619C1C92C00E4ECCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC8903719C1C92C00E4ECCD /* Build configuration list for PBXNativeTarget "OpenPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC8903819C1C92C00E4ECCD /* Debug */,
+				8FC8903919C1C92C00E4ECCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8FC8903A19C1C92C00E4ECCD /* Build configuration list for PBXNativeTarget "OpenPhotoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC8903B19C1C92C00E4ECCD /* Debug */,
+				8FC8903C19C1C92C00E4ECCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FC88FFA19C1C92C00E4ECCD /* Project object */;
+}
