@@ -28,7 +28,7 @@
     
     for (int i = 0; i < 100; i++)
     {
-        [self.distanceData addObject:[NSString stringWithFormat:@"%d m",i+1]];
+        [self.distanceData addObject:[NSString stringWithFormat:@"%d m", i + 1]];
     }
     
     self.z = [[NSNumber alloc] initWithDouble:0.03];
@@ -38,13 +38,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)calculate:(id)sender
-{
-    NSLog(@"calculate");
-    _result.text = _focalLengthTextField.text;
-
 }
 
 -(IBAction)textFieldReturn:(id)sender
@@ -91,25 +84,36 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
-    NSInteger focalLengthIndex = [pickerView selectedRowInComponent:0];
-    NSInteger apertureValueIndex = [pickerView selectedRowInComponent:1];
-    NSInteger distanceIndex = [pickerView selectedRowInComponent:2];
+    NSInteger focalLengthDataIndex = [pickerView selectedRowInComponent:0];
+    NSInteger apertureDataIndex = [pickerView selectedRowInComponent:1];
+    NSInteger distanceDataIndex = [pickerView selectedRowInComponent:2];
     
-    NSNumber* focalLength = [[NSNumber alloc] initWithDouble:[[[self.focalLengths objectAtIndex:focalLengthIndex] substringWithRange:NSMakeRange(0, 2)] doubleValue]];
-    NSNumber* apertureValue = [[NSNumber alloc] initWithDouble:[[self.apertureData objectAtIndex:apertureValueIndex] doubleValue]];
+    long focalLength = [[[self.focalLengths objectAtIndex:focalLengthDataIndex] substringWithRange:NSMakeRange(0, 2)] integerValue];
+    double aperture = [[self.apertureData objectAtIndex:apertureDataIndex] doubleValue];
+    long distance = [[[self.distanceData objectAtIndex:distanceDataIndex] substringWithRange:NSMakeRange(0, 2)] integerValue];
+    
+    double hyperFocalDistance = [self calculateHyperFocal:focalLength withApertureValue:aperture];
+    double nearPointDistance = [self calculateNearpoint:distance withHyperFocalDistance:focalLength andApertureValue:aperture];
     
     
-    self.result.text = [[self calculateHyperFocal:focalLength withApertureValue:apertureValue] stringValue];
+    self.focalLengthTextField.text = [NSString stringWithFormat:@"%.2f", hyperFocalDistance / 1000];
+    self.nearPointTextField.text = [NSString stringWithFormat:@"%.2f", nearPointDistance];
 }
 
-- (NSNumber*) calculateHyperFocal:(NSNumber*) focalLength withApertureValue:(NSNumber*) apertureValue
+- (double) calculateHyperFocal:(long) focalLength withApertureValue:(double) apertureValue
 {
-    NSNumber* result = [[NSNumber alloc] initWithDouble:(([focalLength doubleValue] * [focalLength doubleValue])/([apertureValue doubleValue] * [self.z doubleValue]) + [focalLength doubleValue])/1000];
+    double result = ((focalLength * focalLength) / (apertureValue * [self.z doubleValue]) + focalLength);
 
-    NSLog(@"Using parameter focalLength: %@", focalLength);
-    NSLog(@"Using parameter aperture: %@", apertureValue);
-    NSLog(@"Calculating hyperfocal distance: %@", result);
+    NSLog(@"Using parameter focalLength: %ld", focalLength);
+    NSLog(@"Using parameter aperture: %f", apertureValue);
+    NSLog(@"Calculating hyperfocal distance: %f", result);
     return result;
+}
+
+- (double) calculateNearpoint:(long) distance withHyperFocalDistance:(double) hyperFocalDistance andApertureValue:(double) apertureValue
+{
+    double nearpoint = (distance * hyperFocalDistance - apertureValue) / (hyperFocalDistance - apertureValue) + (distance - apertureValue);
+    return nearpoint;
 }
 
 @end
