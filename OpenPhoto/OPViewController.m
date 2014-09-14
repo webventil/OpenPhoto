@@ -93,11 +93,14 @@
     long distance = [[[self.distanceData objectAtIndex:distanceDataIndex] substringWithRange:NSMakeRange(0, 2)] integerValue];
     
     double hyperFocalDistance = [self calculateHyperFocal:focalLength withApertureValue:aperture];
-    double nearPointDistance = [self calculateNearpoint:distance withHyperFocalDistance:focalLength andApertureValue:aperture];
+    double nearPointDistance = [self calculateNearpoint:distance
+								 withHyperFocalDistance:focalLength andApertureValue:aperture];
+	double farPointDistance = [self calculateFarPoint:distance withHyperFocalDistance:hyperFocalDistance andApertureValue:aperture];
     
     
     self.focalLengthTextField.text = [NSString stringWithFormat:@"%.2f", hyperFocalDistance / 1000];
     self.nearPointTextField.text = [NSString stringWithFormat:@"%.2f", nearPointDistance];
+	self.farPointTextField.text = [NSString stringWithFormat:@"%.2f", farPointDistance];
 }
 
 - (double) calculateHyperFocal:(long) focalLength withApertureValue:(double) apertureValue
@@ -112,8 +115,21 @@
 
 - (double) calculateNearpoint:(long) distance withHyperFocalDistance:(double) hyperFocalDistance andApertureValue:(double) apertureValue
 {
-    double nearpoint = (distance * hyperFocalDistance - apertureValue) / (hyperFocalDistance - apertureValue) + (distance - apertureValue);
+    double nearpoint = (distance * (hyperFocalDistance - apertureValue)) / (hyperFocalDistance - apertureValue) + (distance - apertureValue);
     return nearpoint;
 }
 
+- (double) calculateFarPoint:(long) distance withHyperFocalDistance:(double) hyperFocalDistance andApertureValue:(double) apertureValue
+{
+	if (distance > hyperFocalDistance)
+	{
+		return MAXFLOAT;
+	}
+	else
+	{
+		double farpoint = (distance * (hyperFocalDistance - apertureValue)) / (hyperFocalDistance - apertureValue) + (apertureValue - distance);
+		return farpoint;
+	}
+}
+	
 @end
