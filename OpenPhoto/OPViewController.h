@@ -10,7 +10,8 @@
 
 @interface OPViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property NSNumber* z;
+@property double z;
+
 @property (strong, nonatomic) IBOutlet UIPickerView *focalLengthsPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *dataPicker;
 

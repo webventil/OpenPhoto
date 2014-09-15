@@ -21,17 +21,17 @@
     [super viewDidLoad];
     self.dataPicker.delegate = self;
     self.dataPicker.dataSource = self;
-    self.focalLengths  = [[NSArray alloc] initWithObjects:@"24 mm", @"35 mm", @"50 mm", @"60 mm", @"70 mm", nil];
-    self.apertureData = [[NSArray alloc] initWithObjects:@"1.4", @"1.8", @"2.0", @"2.8",@"4.0",@"5.6",@"6.3",@"8.0",@"16", @"18", @"20", @"22", nil];
+    self.focalLengths = [NSArray arrayWithObjects:@24, @35, @50, @60, @70, nil];
+    self.apertureData = [NSArray arrayWithObjects:@1.4, @1.8, @2.0, @2.8, @4.0, @5.6, @6.3, @8.0, @16, @18, @20, @22, nil];
     
     self.distanceData = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 100; i++)
     {
-        [self.distanceData addObject:[NSString stringWithFormat:@"%d m", i + 1]];
+        [self.distanceData addObject:[NSNumber numberWithInt:i + 1]];
     }
     
-    self.z = [[NSNumber alloc] initWithDouble:0.03];
+    self.z = 0.03;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +50,7 @@
     return 3;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     if (component == 0)
     {
@@ -66,19 +66,19 @@
     }
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (component == 0)
     {
-        return [self.focalLengths objectAtIndex:row];
+        return [NSString stringWithFormat:@"%@ mm", [self.focalLengths objectAtIndex:row]];
     }
     else if (component == 1)
     {
-        return [self.apertureData objectAtIndex:row];
+        return [NSString stringWithFormat:@"f/%@", [self.apertureData objectAtIndex:row]];
     }
     else
     {
-        return [self.distanceData objectAtIndex:row];
+        return [NSString stringWithFormat:@"%@ m", [self.distanceData objectAtIndex:row]];
     }
 }
 
@@ -88,9 +88,9 @@
     NSInteger apertureDataIndex = [pickerView selectedRowInComponent:1];
     NSInteger distanceDataIndex = [pickerView selectedRowInComponent:2];
     
-    long focalLength = [[[self.focalLengths objectAtIndex:focalLengthDataIndex] substringWithRange:NSMakeRange(0, 2)] integerValue];
+    long focalLength = [[self.focalLengths objectAtIndex:focalLengthDataIndex]  integerValue];
     double aperture = [[self.apertureData objectAtIndex:apertureDataIndex] doubleValue];
-    long distance = [[[self.distanceData objectAtIndex:distanceDataIndex] substringWithRange:NSMakeRange(0, 2)] integerValue];
+    long distance = [[self.distanceData objectAtIndex:distanceDataIndex] integerValue];
     
     double hyperFocalDistance = [self calculateHyperFocal:focalLength withApertureValue:aperture];
     double nearPointDistance = [self calculateNearpoint:distance
@@ -105,7 +105,7 @@
 
 - (double) calculateHyperFocal:(long) focalLength withApertureValue:(double) apertureValue
 {
-    double result = ((focalLength * focalLength) / (apertureValue * [self.z doubleValue]) + focalLength);
+    double result = ((focalLength * focalLength) / (apertureValue * self.z) + focalLength);
 
     NSLog(@"Using parameter focalLength: %ld", focalLength);
     NSLog(@"Using parameter aperture: %f", apertureValue);
