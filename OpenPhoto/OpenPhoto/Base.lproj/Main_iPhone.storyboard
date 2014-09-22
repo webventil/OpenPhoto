@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ucg-bd-VXb">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Field of View-->
+        <scene sceneID="ahi-qy-NMF">
+            <objects>
+                <viewController id="swl-mB-gTy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H0S-fF-nKO"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNA-Hc-712"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wch-0f-qYe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Field of View" id="PmB-BD-ocK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VF-ro-ATP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-630" y="577"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Jhf-VX-OZd">
+            <objects>
+                <tabBarController id="Ucg-bd-VXb" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fRZ-XJ-zlC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="swl-mB-gTy" kind="relationship" relationship="viewControllers" id="flg-xu-oZt"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="IlH-F4-KzB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsQ-38-yGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1170" y="262"/>
+        </scene>
+        <!--Depth of Field-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="OPViewController" sceneMemberID="viewController">
@@ -71,8 +108,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.86248405612244894" green="0.86248405612244894" blue="0.86248405612244894" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Depth of Field" id="dzj-oO-bZt"/>
                     <connections>
                         <outlet property="farPointTextField" destination="8LK-e8-Zhb" id="OgW-Go-Rfh"/>
                         <outlet property="focalLengthTextField" destination="ktz-ux-3RY" id="Zea-Ae-X6B"/>
@@ -82,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="373"/>
+            <point key="canvasLocation" x="-630" y="-61"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
