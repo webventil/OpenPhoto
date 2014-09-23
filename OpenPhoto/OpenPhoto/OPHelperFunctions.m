@@ -38,4 +38,9 @@
     }
 }
 
++ (double)calculateAngle:(int)length withFocalLength:(double)focalLength
+{
+    double angleSize = 2 * atan(length / (2 * focalLength));
+    return 57.3 * angleSize;
+}
 @end

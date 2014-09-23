@@ -21,4 +21,7 @@
 + (double)calculateFarPoint:(long)distance
      withHyperFocalDistance:(double)hyperFocalDistance
            andApertureValue:(double)apertureValue;
+
++ (double)calculateAngle:(int)length withFocalLength:(double)focalLength;
+
 @end

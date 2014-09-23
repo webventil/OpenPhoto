@@ -7,11 +7,14 @@
 //
 
 #import "OPViewControllerFOV.h"
+#import "OPHelperFunctions.h"
 #import <math.h>
 
 #define NUMBER_OF_COMPONENTS 1
 #define HORIZONTAL_LENGTH 36
 #define VERTICAL_LENGTH 24
+#define MAX_FOCAL_LENGTH 200
+#define MIN_FOCAL_LENGTH 14
 
 @implementation OPViewControllerFOV
 
@@ -21,14 +24,19 @@
     self.focalLengthPicker.delegate = self;
     self.focalLengthPicker.dataSource = self;
 
-    self.focalLengths = [NSArray arrayWithObjects:@24, @35, @50, @60, @70, nil];
+    self.focalLengths = [[NSMutableArray alloc] init];
 
-    double horizontalAngle = [self calculateAngle:36 withFocalLength:50];
-    double verticalAngle = [self calculateAngle:24 withFocalLength:50];
+    for (int i = MIN_FOCAL_LENGTH; i <= MAX_FOCAL_LENGTH; i++)
+    {
+        [self.focalLengths addObject:[NSNumber numberWithDouble:i]];
+        if (i >= 30)
+        {
+            i += 4;
+        }
+    }
 
-    [self.fieldHorizontalAngle setText:[NSString stringWithFormat:@"%.2f", horizontalAngle]];
-    [self.fieldVerticalAngle setText:[NSString stringWithFormat:@"%.2f", verticalAngle]];
-    [self.fieldDiagonalAngle setText:@"0.0"];
+    [self.focalLengthPicker selectRow:0 inComponent:0 animated:false];
+    [self calculateAndSet:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,24 +62,22 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     NSInteger focalLengthDataIndex = [pickerView selectedRowInComponent:0];
-    long focalLength = [[self.focalLengths objectAtIndex:focalLengthDataIndex] integerValue];
 
-    double horizontalAngle = [self calculateAngle:HORIZONTAL_LENGTH withFocalLength:focalLength];
-    double verticalAngle = [self calculateAngle:VERTICAL_LENGTH withFocalLength:focalLength];
+    [self calculateAndSet:focalLengthDataIndex];
+}
+
+- (void)calculateAndSet:(NSInteger)focalLengthDataIndex
+{
+    long focalLength = [[self.focalLengths objectAtIndex:focalLengthDataIndex] integerValue];
+    double horizontalAngle = [OPHelperFunctions calculateAngle:HORIZONTAL_LENGTH withFocalLength:focalLength];
+    double verticalAngle = [OPHelperFunctions calculateAngle:VERTICAL_LENGTH withFocalLength:focalLength];
 
     double diagonalLength = sqrt(pow(HORIZONTAL_LENGTH, 2) + pow(VERTICAL_LENGTH, 2));
-
-    double diagonalAngle = [self calculateAngle:diagonalLength withFocalLength:focalLength];
+    double diagonalAngle = [OPHelperFunctions calculateAngle:diagonalLength withFocalLength:focalLength];
 
     [self.fieldHorizontalAngle setText:[NSString stringWithFormat:@"%.2f", horizontalAngle]];
     [self.fieldVerticalAngle setText:[NSString stringWithFormat:@"%.2f", verticalAngle]];
     [self.fieldDiagonalAngle setText:[NSString stringWithFormat:@"%.2f", diagonalAngle]];
-}
-
-- (double)calculateAngle:(int)length withFocalLength:(double)focalLength
-{
-    double angleSize = 2 * atan(length / (2 * focalLength));
-    return 57.3 * angleSize;
 }
 
 @end

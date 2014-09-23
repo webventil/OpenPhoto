@@ -15,6 +15,6 @@
 @property(strong, nonatomic) IBOutlet UITextField *fieldDiagonalAngle;
 @property(strong, nonatomic) IBOutlet UIPickerView *focalLengthPicker;
 
-@property(strong, nonatomic) NSArray *focalLengths;
+@property(strong, nonatomic) NSMutableArray *focalLengths;
 
 @end

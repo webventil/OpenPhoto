@@ -19,7 +19,7 @@
 @property(strong, nonatomic) IBOutlet UITextField *farPointTextField;
 @property(strong, nonatomic) IBOutlet UITextField *depthOfFieldTextField;
 
-@property(strong, nonatomic) NSArray *focalLengths;
+@property(strong, nonatomic) NSMutableArray *focalLengths;
 @property(strong, nonatomic) NSMutableArray *fNumberArray;
 @property(strong, nonatomic) NSMutableArray *distanceData;
 

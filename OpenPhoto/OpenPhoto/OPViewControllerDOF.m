@@ -14,6 +14,8 @@
 #define FACTOR_M_TO_MM 1000
 #define COUNT_OF_DISTANCE_VALUES 200
 #define COUNT_OF_APERTURE_VALUES 10
+#define MAX_FOCAL_LENGTH 200
+#define MIN_FOCAL_LENGTH 14
 
 @interface OPViewControllerDOF ()
 
@@ -29,9 +31,18 @@
     self.focalLengthsPicker.delegate = self;
     self.focalLengthsPicker.dataSource = self;
 
-    self.focalLengths = [NSArray arrayWithObjects:@24, @35, @50, @60, @70, nil];
-
+    self.focalLengths = [[NSMutableArray alloc] init];
     self.fNumberArray = [[NSMutableArray alloc] init];
+    self.distanceData = [[NSMutableArray alloc] init];
+
+    for (int i = MIN_FOCAL_LENGTH; i <= MAX_FOCAL_LENGTH; i++)
+    {
+        [self.focalLengths addObject:[NSNumber numberWithDouble:i]];
+        if (i >= 30)
+        {
+            i += 4;
+        }
+    }
 
     for (int i = 0; i <= COUNT_OF_APERTURE_VALUES; i++)
     {
@@ -39,11 +50,13 @@
         [self.fNumberArray addObject:[NSNumber numberWithDouble:fNumber]];
     }
 
-    self.distanceData = [[NSMutableArray alloc] init];
-
-    for (int i = 0; i < COUNT_OF_DISTANCE_VALUES; i++)
+    for (int i = 1; i < COUNT_OF_DISTANCE_VALUES; i++)
     {
-        [self.distanceData addObject:[NSNumber numberWithInt:i + 1]];
+        [self.distanceData addObject:[NSNumber numberWithInt:i]];
+        if (i >= 30)
+        {
+            i += 4;
+        }
     }
 
     // Circle of confusion for 35mm sensor
@@ -139,14 +152,14 @@
     if (farPointDistance >= MAXFLOAT)
     {
         self.farPointTextField.text = @"\u221E";
+        self.depthOfFieldTextField.text = @"\u221E";
     }
     else
     {
         self.farPointTextField.text = [NSString stringWithFormat:@"%.2f m", farPointDistance / FACTOR_M_TO_MM];
+        self.depthOfFieldTextField.text =
+            [NSString stringWithFormat:@"%.2f m", (farPointDistance - nearPointDistance) / FACTOR_M_TO_MM];
     }
-
-    self.depthOfFieldTextField.text =
-        [NSString stringWithFormat:@"%.2f m", (farPointDistance - nearPointDistance) / FACTOR_M_TO_MM];
 }
 
 @end
