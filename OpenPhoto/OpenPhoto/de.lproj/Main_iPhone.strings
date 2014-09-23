@@ -1,0 +1,39 @@
+
+/* Class = "IBUILabel"; text = "Near Point"; ObjectID = "4D5-6c-kNr"; */
+"4D5-6c-kNr.text" = "Nahpunkt";
+
+/* Class = "IBUILabel"; text = "Hyperfocal Distance"; ObjectID = "A2s-6r-KWM"; */
+"A2s-6r-KWM.text" = "Hyperfokale Distanz";
+
+/* Class = "IBUILabel"; text = "Distance"; ObjectID = "IbN-6l-hEa"; */
+"IbN-6l-hEa.text" = "Distanz";
+
+/* Class = "IBUILabel"; text = "Diagonal Angle"; ObjectID = "OLd-8X-NOA"; */
+"OLd-8X-NOA.text" = "Diagonaler Winkel";
+
+/* Class = "IBUITabBarItem"; title = "Field of View"; ObjectID = "PmB-BD-ocK"; */
+"PmB-BD-ocK.title" = "Field of View";
+
+/* Class = "IBUILabel"; text = "Far Point"; ObjectID = "XXT-QR-wBS"; */
+"XXT-QR-wBS.text" = "Fernpunkt";
+
+/* Class = "IBUILabel"; text = "Horizontal Angle"; ObjectID = "YHt-tG-lhM"; */
+"YHt-tG-lhM.text" = "Horizontaler Winkel";
+
+/* Class = "IBUILabel"; text = "Focal Length"; ObjectID = "aox-5O-TsD"; */
+"aox-5O-TsD.text" = "Brennweite";
+
+/* Class = "IBUILabel"; text = "Focal Length"; ObjectID = "d40-QJ-422"; */
+"d40-QJ-422.text" = "Brennweite";
+
+/* Class = "IBUITabBarItem"; title = "Depth of Field"; ObjectID = "dzj-oO-bZt"; */
+"dzj-oO-bZt.title" = "Depth of Field";
+
+/* Class = "IBUILabel"; text = "Depth Of Field"; ObjectID = "gy8-qz-5PX"; */
+"gy8-qz-5PX.text" = "Depth Of Field";
+
+/* Class = "IBUILabel"; text = "Vertical Angle"; ObjectID = "ljZ-Tl-aPo"; */
+"ljZ-Tl-aPo.text" = "Vertikaler Winkel";
+
+/* Class = "IBUILabel"; text = "Aperture"; ObjectID = "tOq-fJ-xJx"; */
+"tOq-fJ-xJx.text" = "Blende";

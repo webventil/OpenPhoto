@@ -7,17 +7,75 @@
         <!--Field of View-->
         <scene sceneID="ahi-qy-NMF">
             <objects>
-                <viewController id="swl-mB-gTy" sceneMemberID="viewController">
+                <viewController id="swl-mB-gTy" customClass="OPViewControllerFOV" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H0S-fF-nKO"/>
-                        <viewControllerLayoutGuide type="bottom" id="NNA-Hc-712"/>
+                        <viewControllerLayoutGuide type="top" id="05I-hC-j67"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vst-0V-DI5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wch-0f-qYe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-OM-eFl">
+                                <rect key="frame" x="185" y="415" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Horizontal Angle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-tG-lhM">
+                                <rect key="frame" x="16" y="419" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sw0-h2-Mmb">
+                                <rect key="frame" x="185" y="448" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Vertical Angle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljZ-Tl-aPo">
+                                <rect key="frame" x="16" y="452" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-LB-9NZ">
+                                <rect key="frame" x="185" y="481" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Diagonal Angle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-8X-NOA">
+                                <rect key="frame" x="16" y="485" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hH4-2A-iiT">
+                                <rect key="frame" x="0.0" y="20" width="320" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Focal Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aox-5O-TsD">
+                                <rect key="frame" x="106" y="190" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0qF-LB-9NZ" secondAttribute="bottom" constant="57" id="Ajh-RA-itv"/>
+                            <constraint firstAttribute="bottom" secondItem="Sw0-h2-Mmb" secondAttribute="bottom" constant="90" id="Bx6-zP-lCh"/>
+                            <constraint firstAttribute="bottom" secondItem="ljZ-Tl-aPo" secondAttribute="bottom" constant="95" id="Dkk-do-PfG"/>
+                            <constraint firstAttribute="bottom" secondItem="YHt-tG-lhM" secondAttribute="bottom" constant="128" id="FFh-MV-AL7"/>
+                            <constraint firstItem="Sw0-h2-Mmb" firstAttribute="width" secondItem="4Bh-OM-eFl" secondAttribute="width" id="KJ6-pI-djw"/>
+                            <constraint firstAttribute="bottom" secondItem="4Bh-OM-eFl" secondAttribute="bottom" constant="123" id="lGm-Sd-IOb"/>
+                            <constraint firstItem="aox-5O-TsD" firstAttribute="top" secondItem="hH4-2A-iiT" secondAttribute="bottom" constant="8" id="sqG-De-saW"/>
+                            <constraint firstAttribute="bottom" secondItem="OLd-8X-NOA" secondAttribute="bottom" constant="62" id="u4H-b9-knu"/>
+                            <constraint firstItem="Sw0-h2-Mmb" firstAttribute="width" secondItem="0qF-LB-9NZ" secondAttribute="width" id="xNY-HQ-bgr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Field of View" id="PmB-BD-ocK"/>
+                    <connections>
+                        <outlet property="fieldDiagonalAngle" destination="0qF-LB-9NZ" id="0zi-U6-gg5"/>
+                        <outlet property="fieldHorizontalAngle" destination="4Bh-OM-eFl" id="x8t-uM-mma"/>
+                        <outlet property="fieldVerticalAngle" destination="Sw0-h2-Mmb" id="v7o-iv-UsM"/>
+                        <outlet property="focalLengthPicker" destination="hH4-2A-iiT" id="pT0-ub-Cbk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VF-ro-ATP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,8 +92,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="swl-mB-gTy" kind="relationship" relationship="viewControllers" id="flg-xu-oZt"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="IlH-F4-KzB"/>
+                        <segue destination="swl-mB-gTy" kind="relationship" relationship="viewControllers" id="64F-z1-Z0i"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsQ-38-yGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,73 +103,104 @@
         <!--Depth of Field-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="OPViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="OPViewControllerDOF" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KW4-yc-Iay"/>
-                        <viewControllerLayoutGuide type="bottom" id="9fM-Zn-sZH"/>
+                        <viewControllerLayoutGuide type="top" id="CzX-LP-AYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="AdS-Y5-78O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d40-QJ-422">
-                                <rect key="frame" x="20" y="190" width="79" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Focal Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d40-QJ-422">
+                                <rect key="frame" x="16" y="190" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blende" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOq-fJ-xJx">
-                                <rect key="frame" x="120" y="190" width="80" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aperture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOq-fJ-xJx">
+                                <rect key="frame" x="130" y="190" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktz-ux-3RY">
-                                <rect key="frame" x="185" y="365" width="119" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktz-ux-3RY">
+                                <rect key="frame" x="185" y="382" width="119" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hyperfokale Distanz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2s-6r-KWM">
-                                <rect key="frame" x="16" y="369" width="161" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hyperfocal Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2s-6r-KWM">
+                                <rect key="frame" x="16" y="386" width="161" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-w6-QTv">
-                                <rect key="frame" x="185" y="398" width="119" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-w6-QTv">
+                                <rect key="frame" x="185" y="415" width="119" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nahpunkt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D5-6c-kNr">
-                                <rect key="frame" x="16" y="402" width="161" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Near Point" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D5-6c-kNr">
+                                <rect key="frame" x="16" y="419" width="161" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-rI-TKk">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-rI-TKk">
                                 <rect key="frame" x="20" y="20" width="280" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="Ux4-k8-3bA"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="RLU-jg-Jsu"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entfernung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbN-6l-hEa">
-                                <rect key="frame" x="210" y="190" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LK-e8-Zhb">
-                                <rect key="frame" x="185" y="431" width="119" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LK-e8-Zhb">
+                                <rect key="frame" x="185" y="448" width="119" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fernpunkt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-QR-wBS">
-                                <rect key="frame" x="16" y="435" width="161" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Far Point" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-QR-wBS">
+                                <rect key="frame" x="16" y="452" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-m7-BYN">
+                                <rect key="frame" x="185" y="481" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Depth Of Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy8-qz-5PX">
+                                <rect key="frame" x="16" y="485" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbN-6l-hEa">
+                                <rect key="frame" x="213" y="190" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XXT-QR-wBS" secondAttribute="bottom" constant="95" id="5De-x0-DvJ"/>
+                            <constraint firstAttribute="bottom" secondItem="PVP-w6-QTv" secondAttribute="bottom" constant="123" id="8j3-1U-fgb"/>
+                            <constraint firstAttribute="bottom" secondItem="A2s-6r-KWM" secondAttribute="bottom" constant="161" id="Caj-b7-LVd"/>
+                            <constraint firstAttribute="bottom" secondItem="gy8-qz-5PX" secondAttribute="bottom" constant="62" id="UFV-gM-qyV"/>
+                            <constraint firstItem="tOq-fJ-xJx" firstAttribute="top" secondItem="fHT-rI-TKk" secondAttribute="bottom" constant="8" id="UXW-lG-NGF"/>
+                            <constraint firstItem="d40-QJ-422" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="W6C-Mr-GXY"/>
+                            <constraint firstItem="8LK-e8-Zhb" firstAttribute="width" secondItem="ktz-ux-3RY" secondAttribute="width" id="WuI-Yi-BX9"/>
+                            <constraint firstAttribute="bottom" secondItem="MkU-m7-BYN" secondAttribute="bottom" constant="57" id="bqs-mv-z5L"/>
+                            <constraint firstItem="8LK-e8-Zhb" firstAttribute="width" secondItem="PVP-w6-QTv" secondAttribute="width" id="ddU-tA-A9T"/>
+                            <constraint firstAttribute="bottom" secondItem="4D5-6c-kNr" secondAttribute="bottom" constant="128" id="eNo-t8-Een"/>
+                            <constraint firstItem="IbN-6l-hEa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="213" id="hPF-wx-ryT"/>
+                            <constraint firstItem="d40-QJ-422" firstAttribute="top" secondItem="fHT-rI-TKk" secondAttribute="bottom" constant="8" id="hsv-FE-8cj"/>
+                            <constraint firstItem="IbN-6l-hEa" firstAttribute="top" secondItem="fHT-rI-TKk" secondAttribute="bottom" constant="8" id="rJY-k0-k3i"/>
+                            <constraint firstAttribute="bottom" secondItem="8LK-e8-Zhb" secondAttribute="bottom" constant="90" id="rst-Vj-fOY"/>
+                            <constraint firstItem="tOq-fJ-xJx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="130" id="uVO-d3-2G0"/>
+                            <constraint firstItem="8LK-e8-Zhb" firstAttribute="width" secondItem="MkU-m7-BYN" secondAttribute="width" id="uwO-5J-1tP"/>
+                            <constraint firstAttribute="bottom" secondItem="ktz-ux-3RY" secondAttribute="bottom" constant="156" id="woX-Lb-lqM"/>
+                            <constraint firstItem="fHT-rI-TKk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="xD9-xq-tzk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Depth of Field" id="dzj-oO-bZt"/>
                     <connections>
+                        <outlet property="depthOfFieldTextField" destination="MkU-m7-BYN" id="BDp-Uj-3cr"/>
                         <outlet property="farPointTextField" destination="8LK-e8-Zhb" id="OgW-Go-Rfh"/>
                         <outlet property="focalLengthTextField" destination="ktz-ux-3RY" id="Zea-Ae-X6B"/>
                         <outlet property="focalLengthsPicker" destination="fHT-rI-TKk" id="wsr-fL-Rdx"/>

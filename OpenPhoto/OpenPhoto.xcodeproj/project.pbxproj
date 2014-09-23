@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F3C2E9119D15DD000C4A29C /* OPHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C2E9019D15DD000C4A29C /* OPHelperFunctions.m */; };
+		8F3C2E9419D1621B00C4A29C /* OPViewControllerFOV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C2E9319D1621B00C4A29C /* OPViewControllerFOV.m */; };
 		8FC8900619C1C92C00E4ECCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900519C1C92C00E4ECCD /* Foundation.framework */; };
 		8FC8900819C1C92C00E4ECCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900719C1C92C00E4ECCD /* CoreGraphics.framework */; };
 		8FC8900A19C1C92C00E4ECCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900919C1C92C00E4ECCD /* UIKit.framework */; };
@@ -15,7 +17,7 @@
 		8FC8901619C1C92C00E4ECCD /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */; };
 		8FC8901919C1C92C00E4ECCD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8901719C1C92C00E4ECCD /* Main_iPhone.storyboard */; };
 		8FC8901C19C1C92C00E4ECCD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8901A19C1C92C00E4ECCD /* Main_iPad.storyboard */; };
-		8FC8901F19C1C92C00E4ECCD /* OPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901E19C1C92C00E4ECCD /* OPViewController.m */; };
+		8FC8901F19C1C92C00E4ECCD /* OPViewControllerDOF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8901E19C1C92C00E4ECCD /* OPViewControllerDOF.m */; };
 		8FC8902119C1C92C00E4ECCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8902019C1C92C00E4ECCD /* Images.xcassets */; };
 		8FC8902819C1C92C00E4ECCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8902719C1C92C00E4ECCD /* XCTest.framework */; };
 		8FC8902919C1C92C00E4ECCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC8900519C1C92C00E4ECCD /* Foundation.framework */; };
@@ -35,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F3C2E8F19D15DD000C4A29C /* OPHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPHelperFunctions.h; sourceTree = "<group>"; };
+		8F3C2E9019D15DD000C4A29C /* OPHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPHelperFunctions.m; sourceTree = "<group>"; };
+		8F3C2E9219D1621B00C4A29C /* OPViewControllerFOV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPViewControllerFOV.h; sourceTree = "<group>"; };
+		8F3C2E9319D1621B00C4A29C /* OPViewControllerFOV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPViewControllerFOV.m; sourceTree = "<group>"; };
+		8F3C2E9619D170A300C4A29C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		8F3C2E9719D172C000C4A29C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		8F3C2E9819D172C000C4A29C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		8F3C2E9919D172C000C4A29C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8F3C2E9A19D172C000C4A29C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FC8900219C1C92C00E4ECCD /* OpenPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC8900519C1C92C00E4ECCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FC8900719C1C92C00E4ECCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,8 +58,8 @@
 		8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
 		8FC8901819C1C92C00E4ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		8FC8901B19C1C92C00E4ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		8FC8901D19C1C92C00E4ECCD /* OPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewController.h; sourceTree = "<group>"; };
-		8FC8901E19C1C92C00E4ECCD /* OPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPViewController.m; sourceTree = "<group>"; };
+		8FC8901D19C1C92C00E4ECCD /* OPViewControllerDOF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewControllerDOF.h; sourceTree = "<group>"; };
+		8FC8901E19C1C92C00E4ECCD /* OPViewControllerDOF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPViewControllerDOF.m; sourceTree = "<group>"; };
 		8FC8902019C1C92C00E4ECCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FC8902619C1C92C00E4ECCD /* OpenPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC8902719C1C92C00E4ECCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F3C2E8E19D15D9400C4A29C /* CalcFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				8F3C2E8F19D15DD000C4A29C /* OPHelperFunctions.h */,
+				8F3C2E9019D15DD000C4A29C /* OPHelperFunctions.m */,
+			);
+			name = CalcFunctions;
+			sourceTree = "<group>";
+		};
 		8FC88FF919C1C92C00E4ECCD = {
 			isa = PBXGroup;
 			children = (
@@ -114,14 +134,17 @@
 		8FC8900B19C1C92C00E4ECCD /* OpenPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				8F3C2E8E19D15D9400C4A29C /* CalcFunctions */,
 				8FC8901419C1C92C00E4ECCD /* OPAppDelegate.h */,
 				8FC8901519C1C92C00E4ECCD /* OPAppDelegate.m */,
 				8FC8901719C1C92C00E4ECCD /* Main_iPhone.storyboard */,
 				8FC8901A19C1C92C00E4ECCD /* Main_iPad.storyboard */,
-				8FC8901D19C1C92C00E4ECCD /* OPViewController.h */,
-				8FC8901E19C1C92C00E4ECCD /* OPViewController.m */,
+				8FC8901D19C1C92C00E4ECCD /* OPViewControllerDOF.h */,
+				8FC8901E19C1C92C00E4ECCD /* OPViewControllerDOF.m */,
 				8FC8902019C1C92C00E4ECCD /* Images.xcassets */,
 				8FC8900C19C1C92C00E4ECCD /* Supporting Files */,
+				8F3C2E9219D1621B00C4A29C /* OPViewControllerFOV.h */,
+				8F3C2E9319D1621B00C4A29C /* OPViewControllerFOV.m */,
 			);
 			path = OpenPhoto;
 			sourceTree = "<group>";
@@ -215,6 +238,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 8FC88FF919C1C92C00E4ECCD;
 			productRefGroup = 8FC8900319C1C92C00E4ECCD /* Products */;
@@ -256,7 +280,9 @@
 			files = (
 				8FC8901219C1C92C00E4ECCD /* main.m in Sources */,
 				8FC8901619C1C92C00E4ECCD /* OPAppDelegate.m in Sources */,
-				8FC8901F19C1C92C00E4ECCD /* OPViewController.m in Sources */,
+				8F3C2E9419D1621B00C4A29C /* OPViewControllerFOV.m in Sources */,
+				8F3C2E9119D15DD000C4A29C /* OPHelperFunctions.m in Sources */,
+				8FC8901F19C1C92C00E4ECCD /* OPViewControllerDOF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +309,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FC8900F19C1C92C00E4ECCD /* en */,
+				8F3C2E9919D172C000C4A29C /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -291,6 +318,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FC8901819C1C92C00E4ECCD /* Base */,
+				8F3C2E9619D170A300C4A29C /* en */,
+				8F3C2E9719D172C000C4A29C /* de */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -299,6 +328,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FC8901B19C1C92C00E4ECCD /* Base */,
+				8F3C2E9819D172C000C4A29C /* de */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
@@ -307,6 +337,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FC8903119C1C92C00E4ECCD /* en */,
+				8F3C2E9A19D172C000C4A29C /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
