@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.55797325519999996" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="0qF-LB-9NZ" secondAttribute="bottom" constant="57" id="Ajh-RA-itv"/>
                             <constraint firstAttribute="bottom" secondItem="Sw0-h2-Mmb" secondAttribute="bottom" constant="90" id="Bx6-zP-lCh"/>
@@ -69,7 +69,7 @@
                             <constraint firstItem="Sw0-h2-Mmb" firstAttribute="width" secondItem="0qF-LB-9NZ" secondAttribute="width" id="xNY-HQ-bgr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Field of View" id="PmB-BD-ocK"/>
+                    <tabBarItem key="tabBarItem" title="Field of View" image="Icon-Small" id="PmB-BD-ocK"/>
                     <connections>
                         <outlet property="fieldDiagonalAngle" destination="0qF-LB-9NZ" id="0zi-U6-gg5"/>
                         <outlet property="fieldHorizontalAngle" destination="4Bh-OM-eFl" id="x8t-uM-mma"/>
@@ -176,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.55797325520214136" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="XXT-QR-wBS" secondAttribute="bottom" constant="95" id="5De-x0-DvJ"/>
                             <constraint firstAttribute="bottom" secondItem="PVP-w6-QTv" secondAttribute="bottom" constant="123" id="8j3-1U-fgb"/>
@@ -198,7 +198,7 @@
                             <constraint firstItem="fHT-rI-TKk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="xD9-xq-tzk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Depth of Field" id="dzj-oO-bZt"/>
+                    <tabBarItem key="tabBarItem" title="Depth of Field" image="Icon-Small" id="dzj-oO-bZt"/>
                     <connections>
                         <outlet property="depthOfFieldTextField" destination="MkU-m7-BYN" id="BDp-Uj-3cr"/>
                         <outlet property="farPointTextField" destination="8LK-e8-Zhb" id="OgW-Go-Rfh"/>
@@ -212,6 +212,9 @@
             <point key="canvasLocation" x="-630" y="-61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-Small" width="29" height="29"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
