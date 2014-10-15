@@ -1,0 +1,9 @@
+before_install:
+    - xctool --version
+#    - gem install cocoapods -v '0.34.2'
+
+language: objective-c
+# podfile: OpenPhoto/Podfile
+
+script:
+  - xctool -workspace OpenPhoto/OpenPhoto.xcworkspace -scheme OpenPhoto -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
