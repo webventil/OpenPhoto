@@ -14,7 +14,7 @@
 		<string>https://github.com/johannes82/OpenPhoto.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OpenPhoto.xcodeproj</string>
+	<string>OpenPhoto/OpenPhoto.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B7BAE924E4B6691956088F1B32E199BBEAE36DD6</key>

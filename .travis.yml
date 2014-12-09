@@ -1,3 +1,5 @@
+osx_image: xcode61
+
 before_install:
     - xctool --version
 #    - gem install cocoapods -v '0.34.2'
